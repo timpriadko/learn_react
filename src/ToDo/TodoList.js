@@ -14,13 +14,13 @@ function TodoList(props) {
     return (
         <ul style={styles.ul}>
             { props.todos.map((todo, index) => {
-                return <TodoItem todo={todo} key={todo.id} index={index.toStrind()} />
+                return <TodoItem todo={todo} key={todo.id} index={index} />
             }) }
         </ul>
     )
 }
 
-TodoList.PropTypes = {
+TodoList.propTypes = {
     todos: PropTypes.arrayOf(PropTypes.object).isRequired
 }
 
